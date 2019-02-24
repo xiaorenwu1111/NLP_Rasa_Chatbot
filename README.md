@@ -38,7 +38,8 @@ Rasa 分词组件
 --------------
 Rasa 分词组件中，目前直接支持中文的组件是 tokenizer_jieba 使用基于 MIT 开源协议的流行中文分词器 jieba(https://github.com/fxsjy/jieba) 作为底层引<br>擎，经过改造可以支持中文分词的组件是 tokenizer_mitie，暂不支持中文分词但未来会支持中文分词的组件是 tokenizer_spacy。想用其他的分词器？当然没问<br>题，因为 Rasa NLU 采用 pipeline 机制，扩展起来非常容易，你只需要自己实现一个分词组件就可以了，后面的章节我将演示如何自定义自己的中文分词器，本章<br>节将不研究如何实现自己的组件。
 
-提取特征<br>
+提取特征
+-------------
 无论是命名实体识别还是意图分类，都需要上游的组件提供特征。常见的特征选择为：词向量、Bag-of-words 和 N-grams 等。用户可以选择同时使用任意的上述组件提取特征，这些组件在实现层面上做了合并特性的操作，因此可以任意和和提取特征的组件一起使用。下面逐一介绍各个组件。<br>
 词向量特征<br>
 TODO<br>
@@ -65,7 +66,8 @@ Duckling 是 Facebook 出品的一款用 Haskell 语言写成的 NER 库，基�
 ner_synonyms<br>
 正确来说 ner_synonyms 不是一个命名实体的提取组件，更像是一个归一化的组件。ner_synonyms 主要是讲各种同义词（synonyms）映射成为标准词汇，比如将实体<br> KFC 的值改写成 肯德基，这种归一化的操作为后续业务处理提供便利。<br>
 
-意图分类<br>
+意图分类
+------------
 意图识别也称意图分类，Rasa 中的内建组件有 intent_classifier_mitie、intent_classifier_sklearn、intent_classifier_tensorflow_embedding 和 <br>intent_classifier_keyword。<br>
 intent_classifier_mitie<br>
 intent_classifier_sklearn<br>
@@ -73,7 +75,8 @@ intent_classifier_tensorflow_embedding<br>
 intent_classifer_keyword<br>
 
 
-结构化输出<br>
+结构化输出
+-----------
 Rasa NLU 通过结构化输出组件将结果输出，在Rasa NLU 中结构化输出组件是框架提供的，不属于 Pipeline 的可变动部分，因此也不需要用户去配置（也无法直接配<br>置）。<br>
 TODO：解释输出的结构，包括组件不同的情况下，可能的结果<br>
 配置 Pipeline<br>
