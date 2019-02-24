@@ -150,3 +150,7 @@ $ cmake --build . --config Release
 $ ./wordrep -e /path/to/your/folder_of_cutted_text_files
 ```
 /path/to/your/folder_of_cutted_text_files above is a directory path in which has word cutted data files to train. This process may cost one or two days.
+
+### 参考链接：https://github.com/zqhZY/_rasa_chatbot
+
+
