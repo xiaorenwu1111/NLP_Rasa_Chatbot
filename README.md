@@ -50,8 +50,10 @@ TODO<br>
 
 正则表达式特征<br>
 TODO<br>
+
 NER组件
 ---------
+
 SpaCy 支持多种 NER 组件：ner_crf、ner_mitie、ner_spacy、ner_duckling、ner_duckling_http 和 ner_synonyms。<br>
 ner_crf<br>
 这个组件如其名，使用 CRF 模型来做 ENR, CRF 模型只依赖 tokens 本身，如果想在 feature function 中使用 POS 特性 那么则需要 nlp_spacy 组件提供<br> spacy_doc 对象来提供 POS 信息。关于 CRF 模型的原理和使用，请移步章节 TODO<br>
